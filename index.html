@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
+
+		<title>First App com banco de dados</title>
+	</head>
+	<body>
+		<div class="container bg-warning p-3 rounded mt-3">
+			<h5>Leia com atenção</h5>
+			<ul>
+				<li>Não utilize informações verdadeiras para cadastro de usuário.</li>
+				<li>Recomendo que crie a senha utilizando o nome de usuário + os números 123 (ex: name123) para não esquecê-la, pois não tem a opção de recuperar senha.</li>
+			</ul>
+		</div>
+		<div class="container row mx-auto m-4">
+
+			<!-- Formulário de login -->
+			<form id="formLogin" class="col border p-5 m-4" onsubmit="handleSubmitLogin(event)">
+				<h2>Login</h2>
+				<div class="mb-3">
+					<label for="nameLogin" class="form-label">Name Account:</label>
+					<input type="text" name="name" class="form-control" id="nameLogin" aria-describedby="emailHelp" />
+				</div>
+				<div class="mb-3">
+					<label for="passwordLogin" class="form-label">Password:</label>
+					<input type="password" name="password" class="form-control" id="passwordLogin" />
+				</div>
+				<div class="mb-3 form-check"></div>
+				<button id="btnLogin" class="btn btn-primary">Logar</button>
+			</form>
+
+
+			<!-- Formulário de Cadastro -->
+			<form id="formCadastro" class="col border p-5 m-4" onsubmit="handleSubmitCadastro(event)">
+				<h2>Cadastro</h2>
+				<div class="mb-3">
+					<label for="nameCadastro" class="form-label">Name Account:</label>
+					<input type="text" name="name" class="form-control" id="nameCadastro" />
+				</div>
+				<div class="mb-3">
+					<label for="emailCadastro" class="form-label">Email:</label>
+					<input type="email" name="email" class="form-control" id="emailCadastro" />
+				</div>
+				<div class="mb-3">
+					<label for="passwordCadastro" class="form-label">Password:</label>
+					<input type="password" name="password" class="form-control" id="passwordCadastro" />
+				</div>
+				<div class="mb-3">
+					<label for="passwordConfirmCadastro" class="form-label">Password Confirm:</label>
+					<input type="password" name="passwordConfirm" class="form-control" id="passwordConfirmCadastro" />
+				</div>
+				<div class="mb-3 form-check"></div>
+				<button id="btnCadastro" class="btn btn-primary">Cadastrar</button>
+			</form>
+
+			<!-- Exibir todos os usuários -->
+			<hr>
+			<div>
+				<h2>Usuários</h2>
+				<button class="btn btn-primary" onclick="getAllUsers()">Exibir</button>
+				<ul id="listaDeUsuarios" class="list-group mt-4">
+				</ul>
+			</div>
+
+
+			<!-- Deletar usuário -->
+			<hr>
+			<div>
+				<a href="./deletarUser.html" class="link-light">
+					<h2 class="text-center mx-auto bg-danger d-block rounded w-50 mt-5 p-3 text-white">Deletar usuário</h2>
+				</a>
+			</div>
+
+		</div>
+	</body>
+	<script src="script.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</html>
