@@ -7,7 +7,7 @@ async function handleSubmitLogin(e) {
 	const formProps = Object.fromEntries(formData)
 
 	try {
-		const res = await fetch('https://bancodedadosserver.onrender.com/login', {
+		const res = await fetch('https://firstappdb-server.onrender.com/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ async function handleSubmitCadastro(e) {
 	}
 
 	try {
-		const res = await fetch('https://bancodedadosserver.onrender.com/cadastro', {
+		const res = await fetch('https://firstappdb-server.onrender.com/cadastro', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ async function handleSubmitCadastro(e) {
 
 async function getAllUsers() {
 	try {
-		const res = await fetch('https://bancodedadosserver.onrender.com/users', {
+		const res = await fetch('https://firstappdb-server.onrender.com/users', {
 			method: 'GET',
 		})
 
@@ -78,7 +78,7 @@ async function handleSubmitDeletar(e) {
 	const formProps = Object.fromEntries(formData)
 
 	try {
-		const res = await fetch('https://bancodedadosserver.onrender.com/deletar', {
+		const res = await fetch('https://firstappdb-server.onrender.com/deletar', {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json',
